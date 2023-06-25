@@ -40,7 +40,7 @@ function exercise03(){
     area(5);
     perimeter(5);
     volume(5);
-    
+    hello();
     `;
     const consoleOutput = eval(code);
     document.getElementById('code').value = code;
