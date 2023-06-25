@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Exercise 2</h1>
+  <a href="index.html" class="back-button">Back</a>
+  
+  <div class="exercise-subpart">
+    <label for="subpart-select">Select Subpart:</label>
+    <select id="subpart-select" onchange="changeSubpart()">
+      <option value="2.01">Exercise 2.01</option>
+      <option value="2.02">Exercise 2.02</option>
+      <option value="2.03">Exercise 2.03</option>
+      <option value="2.04">Exercise 2.04</option>
+      <option value="2.05">Exercise 2.05</option>
+      <option value="2.06">Exercise 2.06</option>
+      <option value="2.07">Exercise 2.07</option>
+    </select>
+  </div>
+  
+  <textarea id="code" readonly></textarea>
+  <div id="output" class="console-output"></div>
+
+
+  <script src="exercise2.js"></script>
+</body>
+
+</html>

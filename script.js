@@ -1,6 +1,7 @@
 // Attach click event listeners to exercise buttons
 document.getElementById('exercise1').addEventListener('click', () => {
   window.location.href = 'exercise1.html';
+  exercise01();
 });
 
 document.getElementById('exercise2').addEventListener('click', () => {
@@ -9,6 +10,7 @@ document.getElementById('exercise2').addEventListener('click', () => {
 
 document.getElementById('exercise3').addEventListener('click', () => {
   window.location.href = 'exercise3.html';
+  exercise03();
 });
 
 document.getElementById('exercise4').addEventListener('click', () => {
@@ -19,26 +21,6 @@ document.getElementById('exercise5').addEventListener('click', () => {
   window.location.href = 'exercise5.html';
 });
 
-
-// JavaScript code for Exercise 1
-function exercise1() {
-  const code = `
-  var flowerName = "Lili"
-  var x,y,z;
-  x = 5;
-  y = 6;
-  z = x + y;
-  let price1 = 100;
-  let price2 = 200;
-  let total = price1+price2;
-  console.log("1. flower Name: ",flowerName,"<br>");
-  console.log("2. x: ",x,"<br>y: ",y,"<br>z: ",z,"<br>");
-  console.log("3. Price1: ",price1,"<br>Price2: ", price2,"<br>Total: ",total);
-  `;
-  eval(code);
-  document.getElementById('code').value = code;
-}
-exercise1();
 
 // Capture console.log output
 var consoleOutput = [];
@@ -67,5 +49,4 @@ function convertToString(value) {
     return String(value);
   }
 }
-
 
