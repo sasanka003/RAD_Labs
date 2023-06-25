@@ -1,8 +1,8 @@
 // Attach click event listeners to exercise buttons
 document.getElementById('exercise1').addEventListener('click', () => {
-  window.location.href = 'exercise1.html';
-  exercise01();
+  window.location.href = 'exercise1.html'
 });
+
 
 document.getElementById('exercise2').addEventListener('click', () => {
   window.location.href = 'exercise2.html';
@@ -10,7 +10,6 @@ document.getElementById('exercise2').addEventListener('click', () => {
 
 document.getElementById('exercise3').addEventListener('click', () => {
   window.location.href = 'exercise3.html';
-  exercise03();
 });
 
 document.getElementById('exercise4').addEventListener('click', () => {
