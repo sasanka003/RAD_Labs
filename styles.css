@@ -64,3 +64,15 @@ a:hover {
   align-items: center;
   margin-top: 50px; /* Adjust the margin as needed */
 }
+
+/* Styling for the footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  }
