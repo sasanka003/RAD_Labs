@@ -9,24 +9,27 @@ function exercise4(subpart) {
             color : 'orange' ,
             type : 'cat',
             legs:4,
-            name:'kitty',
+            name:'Kitty',
             speed :24
         };
     
-        console.log("type: ",mammal.type);
-        console.log("name: ",mammal.name);
+        console.log("Type: ",mammal.type);
+        console.log("Name: ",mammal.name);
         `;
         break;
       case '4.02':
         code = `
         const person = {
-            firstName:"John",
-            lastName:"Doe",
-            id:5566,
-            fullName:function(){
-                return this.firstName + " " + this.lastName;
-            }
+          firstName: "John",
+          lastName: "Doe",
+          id: 5566,
+          fullName: function() {
+            return this.firstName + " " + this.lastName;
+          }
         };
+        
+        console.log("Fullname: ",person.fullName());
+        
         `;
         break;
       case '4.03':
@@ -59,6 +62,8 @@ function exercise4(subpart) {
   function changeSubpart() {
     const selectedSubpart = document.getElementById('subpart-select').value;
     exercise4(selectedSubpart);
+    updateConsoleOutput();
   }
 
   exercise4('4.01'); // Set default subpart
+  updateConsoleOutput();

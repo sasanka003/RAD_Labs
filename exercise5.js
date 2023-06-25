@@ -95,8 +95,8 @@ function exercise5(subpart) {
           code = `
           const numbers = [80,30,40,50,23];
           numbers[2]=78;
-          console.log("numbers[2] is ",numbers[2]);
-          console.log("length of the array is ",numbers.length);
+          console.log("Number at index 2 : ",numbers[2]);
+          console.log("Length of the array : ",numbers.length,"<br>");
           
           for(let i=0; i<numbers.length; i++){
               for(let j=0; j<numbers.length-1; j++){
@@ -107,21 +107,19 @@ function exercise5(subpart) {
                   }
               }
           }
-      
-          for(let i=0; i<numbers.length; i++){
-              console.log(numbers[i]);
-          }
+          console.log("Sorted array :",numbers);
           `;
           break;
         case '5.08':
           code = `
           const names = ["sadun" ,"kamal","nimal","ruwan"];
           let str = names.toString();
-          console.log("The array: ",str);
+          console.log("Initial array converted to string:  ",str);
           names.splice(3,1);
+          console.log("Array after removing last element:  ",names);
           names.push("nuwani");
           str = names.toString();
-          console.log("The array: ",str);
+          console.log("Final array: ",names);
           `;
           break;
         case '5.09':
@@ -129,7 +127,7 @@ function exercise5(subpart) {
           const myGirls = ["Cecilie", "Lone"];
           const myBoys = ["Emil", "Tobias", "Linus"];
           const array = myGirls.concat(myBoys);
-          console.log("The merged array ", array);
+          console.log("Merged array : ", array);
           `;
           break;
         case '5.10':
@@ -139,7 +137,7 @@ function exercise5(subpart) {
           for(let i=0; i<numbersArray.length; i++){
               sum = sum + numbersArray[i]
           }
-          console.log("Sum of the array is ",sum);
+          console.log("Sum : ",sum);
           `;
           break;
         default:
@@ -156,6 +154,8 @@ function exercise5(subpart) {
     function changeSubpart() {
       const selectedSubpart = document.getElementById('subpart-select').value;
       exercise5(selectedSubpart);
+      updateConsoleOutput();
     }
 
     exercise5('5.01'); // Set default subpart
+    updateConsoleOutput();

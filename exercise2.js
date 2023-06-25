@@ -11,7 +11,7 @@ function exercise2(subpart) {
         var Mark3 = 90;
         var total = Mark1+Mark2+Mark3;
         var average = total/3;
-        console.log("Total: ",total,"<br>");
+        console.log("Total: ",total);
         console.log("Average: ",average,"<br>");
         `;
         break;
@@ -20,7 +20,7 @@ function exercise2(subpart) {
         var name = "Sasanka Udana";
         var age = 23;
         var gender = "Male"
-        console.log("2. name: ",name,"<br>age: ",age,"<br>gender: ",gender,"<br>");
+        console.log("Name: ",name,"<br>Age: ",age,"<br>Gender: ",gender,"<br>");
         `;
         break;
       case '2.03':
@@ -63,7 +63,7 @@ function exercise2(subpart) {
       case '2.06':
         code = `
         var statement1 = "what a very";
-        var statement2 = "nice day";
+        var statement2 = " nice day.";
     
         console.log(statement1+statement2);
         `;
@@ -74,7 +74,7 @@ function exercise2(subpart) {
         var y = "5" + 5;
         var z = "Hello" + 5;
         
-        console.log("x: ",x," y: ",y," z: ",z);
+        console.log("x: ",x,"<br>y: ",y,"<br>z: ",z);
         `;
         break;
       default:
@@ -91,6 +91,9 @@ function exercise2(subpart) {
   function changeSubpart() {
     const selectedSubpart = document.getElementById('subpart-select').value;
     exercise2(selectedSubpart);
+    updateConsoleOutput();
+    
   }
 
   exercise2('2.01'); // Set default subpart
+  updateConsoleOutput();
