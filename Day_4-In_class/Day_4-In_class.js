@@ -1,21 +1,25 @@
 //Exercise 2
-function exercise2(subpart) {
+function inClass4(subpart) {
     let code = ``;
 
     // Set code based on selected subpart
     switch (subpart) {
-      case '2.01':
+      case '4.01':
         code = `
-        var Mark1 = 30;
-        var Mark2 = 40;
-        var Mark3 = 90;
-        var total = Mark1+Mark2+Mark3;
-        var average = total/3;
-        console.log("Total: ",total);
-        console.log("Average: ",average,"<br>");
+        class Rectangle {
+          width =2;
+          height = 4;
+
+          getArea() {
+            return this.width*this.height;
+          }
+        }
+
+        const rectangle1 = Object.create(Rectangle);
+        console.log(rectangle1.getArea());
         `;
         break;
-      case '2.02':
+      case '4.02':
         code = `
         var name = "Sasanka Udana";
         var age = 23;
@@ -23,7 +27,7 @@ function exercise2(subpart) {
         console.log("Name: ",name,"<br>Age: ",age,"<br>Gender: ",gender,"<br>");
         `;
         break;
-      case '2.03':
+      case '4.03':
         code = `
         var length = 4;
         var breadth = 2;
@@ -31,7 +35,7 @@ function exercise2(subpart) {
         console.log("Area of the rectangle is ",area);
         `;
         break;
-      case '2.04':
+      case '4.04':
         code = `
         var a = 10;
         var b = 20;
@@ -43,7 +47,7 @@ function exercise2(subpart) {
         console.log("f) ",a%=b)
         `;
         break;
-      case '2.05':
+      case '4.05':
         code = `
         var x = 5;
         var y = 4;
@@ -60,7 +64,7 @@ function exercise2(subpart) {
         }
         `;
         break;
-      case '2.06':
+      case '4.06':
         code = `
         var statement1 = "what a very";
         var statement2 = " nice day.";
@@ -68,7 +72,7 @@ function exercise2(subpart) {
         console.log(statement1+statement2);
         `;
         break;
-      case '2.07':
+      case '4.07':
         code = `
         var x = 5+5;
         var y = "5" + 5;
@@ -90,10 +94,10 @@ function exercise2(subpart) {
   // Function to handle subpart change
   function changeSubpart() {
     const selectedSubpart = document.getElementById('subpart-select').value;
-    exercise2(selectedSubpart);
+    inClass4(selectedSubpart);
     updateConsoleOutput();
     
   }
 
-  exercise2('2.01'); // Set default subpart
+  inClass4('4.01'); // Set default subpart
   updateConsoleOutput();
