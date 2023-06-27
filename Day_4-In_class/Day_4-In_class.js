@@ -15,70 +15,101 @@ function inClass4(subpart) {
           }
         }
 
-        const rectangle1 = Object.create(Rectangle);
-        console.log(rectangle1.getArea());
+        const rectangle1 = new Rectangle();
+        console.log("Area = ",rectangle1.getArea());
         `;
         break;
       case '4.02':
         code = `
-        var name = "Sasanka Udana";
-        var age = 23;
-        var gender = "Male"
-        console.log("Name: ",name,"<br>Age: ",age,"<br>Gender: ",gender,"<br>");
+        class Shape {
+          color;
+          constructor(color) {
+            this.color = color;
+          }
+          getColor() {
+            console.log(\`Color: \${this.color}\`);
+          }
+        }
+        
+        class Rectangle extends Shape {
+          height;
+          width;
+          constructor(width = 0, height = 0) {
+            super(); // Invoke the constructor of the base class
+            this.height = height;
+            this.width = width;
+          }
+          getArea() {
+            return this.width * this.height;
+          }
+        }
+        
+        class Circle extends Shape {
+          radius;
+          constructor(radius = 0) {
+            super();
+            this.radius = radius;
+          }
+          getArea() {
+            return 3.14 * this.radius * this.radius;
+          }
+        }
+        
+        const r1 = new Rectangle(10, 4);
+        const c1 = new Circle(4);
+        console.log("Area of rectangle: ",r1.getArea());
+        console.log("Area of circle: ",c1.getArea());
+        
         `;
         break;
       case '4.03':
         code = `
-        var length = 4;
-        var breadth = 2;
-        var area = length*breadth;   
-        console.log("Area of the rectangle is ",area);
+        class Vehicle {
+          move(){
+            console.log("Vehicle moves");
+          }
+        }
+
+        class Car extends Vehicle {
+          move() {
+            console.log("Car drives");
+          }
+        }
+
+        class Ship extends Vehicle {
+          move() {
+            console.log("Ship sails");
+          }
+        }
+
+        class Plane extends Vehicle {
+          move() {
+            console.log("Plane flies");
+          }
+        }
+
+        const car1 = new Car();
+        car1.move();
         `;
         break;
       case '4.04':
         code = `
-        var a = 10;
-        var b = 20;
-        console.log("a) ",a+=b)
-        console.log("b) ",a-=b)
-        console.log("c) ",a+=b)
-        console.log("d) ",a*=b)
-        console.log("e) ",a/=b)
-        console.log("f) ",a%=b)
+        
         `;
         break;
       case '4.05':
         code = `
-        var x = 5;
-        var y = 4;
-        var text1 = "A";
-        var text2 = "B";
-        if(x>=y){
-            console.log("x>=y");
-        }
-        if(x!=y){
-            console.log("x != y");
-        }
-        if(text1 < text2){
-            console.log("text1 < text2");
-        }
+        
         `;
         break;
       case '4.06':
         code = `
-        var statement1 = "what a very";
-        var statement2 = " nice day.";
-    
-        console.log(statement1+statement2);
+        
         `;
         break;
       case '4.07':
         code = `
-        var x = 5+5;
-        var y = "5" + 5;
-        var z = "Hello" + 5;
         
-        console.log("x: ",x,"<br>y: ",y,"<br>z: ",z);
         `;
         break;
       default:
