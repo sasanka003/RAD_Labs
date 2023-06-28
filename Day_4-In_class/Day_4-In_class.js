@@ -94,7 +94,32 @@ function inClass4(subpart) {
         break;
       case '4.04':
         code = `
-        
+        class Animal {
+          constructor() {
+         if (this.constructor == Animal) {
+          console.error("Abstract classes can't be instantiated.");
+         }
+          }
+          say() {
+         console.error("Method 'say()' must be implemented.");
+          }
+          eat() {
+         console.log("eating");
+          }
+         }
+         class Dog extends Animal {
+          say() {
+         console.log("bark");
+          }}
+         class Cat extends Animal {
+          say() {
+         console.log("meow");
+          }}
+         
+          const animal = new Animal();
+          animal.say();
+        //  const dog = new Dog();
+        //  dog.say();
         `;
         break;
       case '4.05':
@@ -124,6 +149,7 @@ function inClass4(subpart) {
 
   // Function to handle subpart change
   function changeSubpart() {
+    consoleOutput.splice(0);
     const selectedSubpart = document.getElementById('subpart-select').value;
     inClass4(selectedSubpart);
     updateConsoleOutput();
