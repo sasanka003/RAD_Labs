@@ -89,6 +89,7 @@ function exercise2(subpart) {
 
   // Function to handle subpart change
   function changeSubpart() {
+    consoleOutput.splice(0);
     const selectedSubpart = document.getElementById('subpart-select').value;
     exercise2(selectedSubpart);
     updateConsoleOutput();

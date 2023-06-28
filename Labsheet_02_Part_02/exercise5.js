@@ -152,6 +152,7 @@ function exercise5(subpart) {
 
     // Function to handle subpart change
     function changeSubpart() {
+      consoleOutput.splice(0);
       const selectedSubpart = document.getElementById('subpart-select').value;
       exercise5(selectedSubpart);
       updateConsoleOutput();
