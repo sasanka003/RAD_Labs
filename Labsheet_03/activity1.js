@@ -4,46 +4,45 @@ function exercise01() {
     var str1 = "Programmo";
     var str2 = "Phobio";
 
-//01    
-
+01    
+    console.log("<ol><li>");
     function strConcat(str1, str2){
         var str3 = str1.concat(str2);
         return str3;
     }
 
     str3 = strConcat(str1, str2);
-    console.log('01');
-    console.log('   '+str3);
+    console.log(str3);
 
-//02 (a)
-
+02.a
+    console.log("</li><li><ol><li>");
     function lowercase(str){
         return str.toLowerCase();
     }
 
-    console.log('02');
-    console.log('  (a)'+lowercase(str3));
+    console.log(lowercase(str3));
 
-//02 (b)
-
+02.b
+    console.log("</li><li>");
     function uppercase(str){
         return str.toUpperCase();
     }
-    console.log('  (b)'+uppercase(str3));
+    console.log(uppercase(str3));
 
-//02 (c)
-
+02.c
+    console.log("</li><li>");
     var str4 = str1 + "," + str2;
     const arr = str4.split(",");
 
-    console.log('  (c)'+"[\'" + arr + "\']");
+    console.log("[\'" + arr + "\']");
 
-//02 (d)
-
+02.d
+    console.log("</li><li>");
     function findindex(str){
         return str.indexOf("Phobio");
     }
-    console.log('  (d)'+findindex(str3));
+    console.log(findindex(str3));
+    console.log("</li></ol></ol>");
     `;
 
     const consoleOutput = eval(code);
