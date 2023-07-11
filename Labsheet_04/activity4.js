@@ -1,4 +1,4 @@
-function exercise02() {
+function exercise04() {
     const code = `
 
     `;
