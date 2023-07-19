@@ -21,21 +21,22 @@ function exercise01() {
         }
       
         showDetails() {
-          console.log(\`Index Number: ${this.indexNumber}\`);
-          console.log(\`Name: ${this.name}\`);
-          console.log(\`Date of Birth: ${this.dateOfBirth}\`);
-          console.log(\`Address: ${this.address}\`);
-          console.log(\`Contact Number: ${this.contactNumber}\`);
-          console.log(\`Email Address: ${this.emailAddress}\`);
+          console.log(\`Index Number: \${this.indexNumber}\`);
+          console.log(\`Name: \${this.name}\`);
+          console.log(\`Date of Birth: \${this.dateOfBirth}\`);
+          console.log(\`Address: \${this.address}\`);
+          console.log(\`Contact Number: \${this.contactNumber}\`);
+          console.log(\`Email Address: \${this.emailAddress}\`);
         }
       
         setGroupNumber() {
           this.groupNumber = this.indexNumber % 4 + 1;
+          console.log("Assigned to group")
         }
       
         showGroupNumber() {
           if (this.groupNumber !== null) {
-            console.log(\`Group Number: ${this.groupNumber}\`);
+            console.log(\`Group Number: \${this.groupNumber}\`);
           } else {
             console.log('Group number has not been set.');
           }
@@ -52,7 +53,6 @@ function exercise01() {
       
       // set group number and show group number
       student1.setGroupNumber();
-      console.log('Group Number:');
       student1.showGroupNumber();
       
 
@@ -62,3 +62,4 @@ function exercise01() {
     document.getElementById('code').value = code;
     document.getElementById('output').innerHTML = consoleOutput;
 }
+

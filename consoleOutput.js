@@ -3,6 +3,7 @@ var originalConsoleLog = console.log;
 
 console.log = function() {
   var message = Array.from(arguments).map(convertToString).join(" ");
+  message = removeEscapeCharacters(message); // Adding the new function call
   consoleOutput.push('<span class="log">' + message + '</span>');
   originalConsoleLog.apply(console, arguments);
   updateConsoleOutput();
@@ -10,6 +11,7 @@ console.log = function() {
 
 console.error = function() {
   var message = Array.from(arguments).map(convertToString).join(" ");
+  message = removeEscapeCharacters(message); // Adding the new function call
   consoleOutput.push('<span class="error">' + message + '</span>');
   originalConsoleLog.apply(console, arguments);
   updateConsoleOutput();
@@ -30,8 +32,18 @@ function convertToString(value) {
   }
 }
 
+function removeEscapeCharacters(message) {
+  // Use a regular expression to find and remove escape characters from the message
+  return message
+    .replace(/&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&#96;/g, "`"); 
+    // Add other escape characters as needed
+}
+
 window.onload = function() {
   consoleOutput.splice(0);
 };
+
 
 
